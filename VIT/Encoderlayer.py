@@ -1,11 +1,13 @@
 import torch
 import torch.nn as nn
+from MLP import MLP
 
 class Encoderlayer(nn.Module):
   def __init__(self, embed_dim, hidden_dim, num_heads, dropout=0.0):
 
         super().__init__()
 
+        self.device = device
         self.norm_1 = nn.LayerNorm(embed_dim)
         self.attention = nn.MultiheadAttention(embed_dim, num_heads,
                                           dropout=dropout)
