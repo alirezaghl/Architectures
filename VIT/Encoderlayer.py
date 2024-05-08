@@ -7,7 +7,6 @@ class Encoderlayer(nn.Module):
 
         super().__init__()
 
-        self.device = device
         self.norm_1 = nn.LayerNorm(embed_dim)
         self.attention = nn.MultiheadAttention(embed_dim, num_heads,
                                           dropout=dropout)
