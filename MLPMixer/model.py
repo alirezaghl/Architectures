@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from MLPblock import MLPBlock
+from MixerBlock import MixerBlock
 from PatchEmbedding import PatchEmbedding
 
 class MLPMixer(nn.Module):
