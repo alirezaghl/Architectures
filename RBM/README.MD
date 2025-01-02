@@ -19,15 +19,31 @@ torch
 torchvision
 matplotlib
 
+## Project Structure
+
 ├── rbm.py      # RBM model and configuration
 ├── data.py     # Data loading utilities  
 ├── run.py      # Training loop and visualization
 └── README.md
 
-git clone <repository-url>
-cd rbm-mnist
+## Usage
+* Clone the repository:
+   git clone <repository-url>
+   cd rbm-mnist
 
-python run.py
+* Run the training:
+   python run.py
+
+The script will:
+
+* Download MNIST dataset automatically
+* Train the RBM model
+* Save reconstruction visualizations every 5 epochs
+* Plot and save the training curve
+
+## Configuration
+
+You can modify the RBM hyperparameters in __rbm.py__. The default configuration is:
 
 @dataclass
 class RBMConfig:
@@ -37,3 +53,18 @@ class RBMConfig:
     batch_size: int = 64
     num_epochs: int = 20
     learning_rate: float = 1e-2
+
+## Model Details
+The RBM implementation uses:
+
+*Binary visible and hidden units
+*Contrastive Divergence (CD) training
+* Mean squared error for reconstruction monitoring
+
+
+## Example Outputs
+After training, you should see:
+[Generated](https://github.com/alirezaghl/Architectures/blob/main/RBM/results/reconstructions_epoch_20.png)
+
+Reconstruction visualizations showing the original images (top row) and their reconstructions (bottom row)
+A training curve showing the decrease in reconstruction error over epochs
