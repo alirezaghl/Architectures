@@ -64,7 +64,7 @@ The RBM implementation uses:
 
 ## Example Outputs
 After training, you should see:
-[Generated](https://github.com/alirezaghl/Architectures/blob/main/RBM/results/reconstructions_epoch_20.png)
+[Generated]('https://github.com/alirezaghl/Architectures/blob/main/RBM/results/reconstructions_epoch_20.png')
 
 Reconstruction visualizations showing the original images (top row) and their reconstructions (bottom row)
 A training curve showing the decrease in reconstruction error over epochs
